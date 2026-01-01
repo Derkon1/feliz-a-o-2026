@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;800&display=swap");
+
+
+:root {
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color-scheme: dark;
+    color: rgba(37, 36, 36, 0.87);
+    background-color: #fffdfd;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.ICONOS {
+    color: white;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+
+.men {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.men:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+}
+
+.men i {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Nunito", sans-serif;
+}
+
+.fireworks-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+    pointer-events: none;
+
+    canvas {
+        display: block;
+    }
+}
+
+.sky {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgb(10, 10, 35);
+    background: -moz-linear-gradient(0deg,
+            rgb(10, 10, 35) 0%,
+            rgb(25, 10, 45) 50%,
+            rgb(0, 0, 0) 100%);
+    background: -webkit-linear-gradient(0deg,
+            rgb(10, 10, 35) 0%,
+            rgb(25, 10, 45) 50%,
+            rgb(0, 0, 0) 100%);
+    background: linear-gradient(0deg,
+            rgb(10, 10, 35) 0%,
+            rgb(25, 10, 45) 50%,
+            rgb(0, 0, 0) 100%);
+}
+
+
+
+.intro {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    text-align: center;
+    line-height: 0px;
+    color: #ffffff;
+
+    h1 {
+        margin: 0 0 60px 0;
+        font-size: 80px;
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.3);
+    }
+
+}
+
+.mensaje {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    display: none;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 2.5rem;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    max-width: 80%;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.mensaje {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+}
+
+.oculto {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.mensaje p {
+    margin: 0;
+    font-weight: 300;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .intro h1 {
+        font-size: 45px;
+        padding: 0 20px;
+    }
+
+    .mensaje {
+        width: 85%;
+        max-width: none;
+        font-size: 1.1rem;
+        padding: 1.5rem;
+    }
+
+    .ICONOS {
+        bottom: 20px;
+        left: 20px;
+    }
+
+    .men {
+        width: 60px;
+        height: 60px;
+    }
+
+    .men i {
+        font-size: 1.8rem;
+    }
+}
